@@ -11,7 +11,7 @@ public class ExerciceOne {
 		// TODO Auto-generated method stub exercise one
 		DayOfWeek day = LocalDate.now().getDayOfWeek();
 		System.out.println(day);
-		
+				
 		//exercise 2
 		LocalDate testDate = LocalDate.now();
 		DateTimeFormatter formater = DateTimeFormatter.ofPattern("dd / MM /YYYY");
