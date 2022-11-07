@@ -6,12 +6,12 @@ public class ExerciceTwo {
 
 	public static void main(String[] args) {
 		// TODO Exercise 4 factorial
-//		int number = 8;
-//		int result = 1;
-//		for(int i = 2; i <= number;  i++) {
-//			result = result * i;
-//		}		
-//		System.out.println(result);
+		int number = 8;
+		int result = 1;
+		for(int i = 2; i <= number;  i++) {
+			result = result * i;
+		}		
+		System.out.println(result);
 		
 		ExerciceTwo.findNumber();
 

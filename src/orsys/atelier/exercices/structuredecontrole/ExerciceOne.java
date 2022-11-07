@@ -15,7 +15,7 @@ public class ExerciceOne {
 			System.out.println(a);
 		}
 		else if(a== b) {
-			System.out.println(a +" and " + b);
+			System.out.println(a +" est égal à " + b);
 		}
 		else {
 			System.out.println(b);
