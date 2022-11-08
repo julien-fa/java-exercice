@@ -13,7 +13,11 @@ public class CreateFunction {
 		myList.add(5);
 		myList.add(9);
 		
-		CreateFunction.displayCarreInList(myList);
+//		String[] test = {"test", "test"};
+//		
+//		metEnMajuscules(test);
+		
+		System.out.println(CreateFunction.recurPuissance(4,2));
 		
 	}	
 	
@@ -52,20 +56,39 @@ public class CreateFunction {
 		}
 		
 		// TODO functions exercise five
-		public static void metEnMajuscule(String[] arr) {
+		public static void metEnMajuscules(String[] arr) {
 			for (int i = 0; i < arr.length; i++) {
 				arr[i]= arr[i].toUpperCase();
-			}
+			}			
 			System.out.println(Arrays.toString(arr));
 		}
 		
 		// TODO functions exercise six
 		public static void displayCarreInList(List<Integer> listInt) {
-			for (Integer number : listInt) {
+			listInt.forEach((number) -> {
 				int result = number * number;
 				System.out.println(result);
-			}
+			});			
 		}
 		
 		// TODO functions exercise seven
+		
+		public static int recurFactorielle(int number) {
+			int result = 1;
+			if(number == 1) {
+				return result;
+			}
+			result = number * recurFactorielle(number-1);			
+			return result;
+		}
+		
+		public static double recurPuissance(double number, int puissance) {
+			double result = 1;
+			if(puissance == 0) {
+				return result;
+			}
+			puissance -= 1; 
+			result = number * recurPuissance(number, puissance);
+			return result;
+		}
 }

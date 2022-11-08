@@ -17,8 +17,7 @@ public class ExerciceFour {
 		for (String elt : list) {
 			double number = (double)Integer.parseInt(elt);			
 			System.out.println(Math.cos(number));
-		}
-		
+		}		
 		scan.close();
 	}
 

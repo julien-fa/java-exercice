@@ -15,7 +15,7 @@ public class ExerciceThree {
 		ArrayList<String> list = new ArrayList<>(Arrays.asList(phrase.split("-")));
 		System.out.println(list);
 		for (String elt : list) {
-			if(elt.contains("le") || elt.contains("la")) {
+			if(!(elt.contains("le")|| elt.contains("la"))) {
 				System.out.println(elt);
 			}
 		}
