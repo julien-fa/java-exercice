@@ -7,12 +7,17 @@ import javax.sound.midi.MidiSystem;
 import javax.sound.midi.MidiUnavailableException;
 
 public class Musique {
+	
+	public static void main(String[] args) {
+	    Musique.testJul();
+	}
+	
 
 	public static void exempleCours() throws MidiUnavailableException, InterruptedException {
 		// TODO Auto-generated method stub
 		//String song = "DO RE MI DO DO RE MI DO MI FA SOL MI MI FA SOL MI";
-		String morceau = "DO RE MI FA SOL";
-		
+		String morceau = "DO RE MI FA SOL LA SI DO";
+				
 		Synthesizer synth = MidiSystem.getSynthesizer();
         synth.open();
         MidiChannel[] channels = synth.getChannels();
@@ -24,6 +29,36 @@ public class Musique {
         Thread.sleep(500);
         channels[0].noteOn(69, 600);
         Thread.sleep(500);
+	}
+	
+	public static void testJul() {
+		
+		int[] notes = {57, 60, 62, 64, 65, 67, 69, 71, 72, 72, 71, 69, 67, 65, 64, 62, 60, 57};
+		        
+        try {
+        	
+        	Synthesizer synth = MidiSystem.getSynthesizer();
+        	//we start the synthesizer
+            synth.open();
+            MidiChannel[] channels = synth.getChannels();
+            
+            for (int note : notes) {
+            	
+            	try {
+            		channels[0].noteOn(note, 900);
+            		Thread.sleep(1000);
+            	}
+				catch(InterruptedException e) {
+					break;
+				}
+            	finally {
+            		channels[0].noteOff(note);
+            	}
+			}            
+        	
+        }catch(MidiUnavailableException e) {
+        	e.printStackTrace();        	
+        }
 	}
 
 	//Synthesizer synth = MidiSystem.getSynthesizer();
