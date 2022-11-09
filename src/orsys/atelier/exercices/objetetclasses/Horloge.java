@@ -26,7 +26,7 @@ public class Horloge {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return this.heures + ":" + this.minutes + ":" + this.secondes;
+		return String.format("%s %s %s",  this.heures, this.minutes, this.secondes);		
 	}
 
 	public int getHeures() {
