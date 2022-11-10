@@ -19,7 +19,7 @@ public class Musique {
 	public static void exempleCours() throws MidiUnavailableException, InterruptedException {
 		// TODO Auto-generated method stub
 		//String song = "DO RE MI DO DO RE MI DO MI FA SOL MI MI FA SOL MI";
-		String morceau = "DO RE MI FA SOL LA SI DO";
+		//String otherSong = "DO RE MI FA SOL LA SI DO";
 				
 		Synthesizer synth = MidiSystem.getSynthesizer();
         synth.open();

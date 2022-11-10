@@ -2,6 +2,7 @@ package orsys.atelier.exercices.stream;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collector;
@@ -30,6 +31,8 @@ public class TestStream {
 		Collections.reverse(test3);		
 		System.out.println(test3);
 		
+		List<Integer> list = test2.stream().filter(nombre -> nombre%2 == 0).sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+		System.out.println(test2);
 		
 	}
 

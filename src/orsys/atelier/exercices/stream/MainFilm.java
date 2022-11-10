@@ -70,10 +70,16 @@ public class MainFilm {
 				.sorted(Comparator.comparing(Films::getTitre))				
 				.collect(Collectors.toList());
 		
+		List<String> test5 = manyFilm.stream()
+				.filter(film -> film.getGenre() == "policier" && film.getRealisateur() == "Tarantino")
+				.sorted(Comparator.comparing(Films::getTitre))
+				.map(film -> film.getTitre())
+				.collect(Collectors.toList());
+		
 		List<String> strFinal = test4.stream().map(film -> film.getTitre()).collect(Collectors.toList());
 		
 				
-		for (String title : strFinal) {
+		for (String title : test5) {
 			System.out.println(title);
 		}
 		
